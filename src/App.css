@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.keypress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.5;
+  flex-wrap: wrap;
+}
+
+.keypress-active, .keypress-inactive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  min-width: 49%;
+  min-height: 300px;
+}
+
+.keypress-active {
+  background-color: blue;
+  color: lightcyan;
+}
+
+.keypress-inactive {
+  background-color: lightcyan;
+  color: blue;
+}
+
+.helpcenter {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
