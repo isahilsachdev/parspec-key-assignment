@@ -7,12 +7,16 @@ const ReactKeypressItem = ({listener, shortcut, title, handleActiveShortcuts}) =
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
-    setToggle(!toggle);
-  }
+    setToggle(prevToggle => !prevToggle);
+  };
 
   useEffect(() => {
     listener.simple_combo(shortcut, handleToggle);
-  }, [shortcut])
+
+    return () => {
+      listener.unregister_combo(shortcut);
+    };
+  }, [listener, shortcut]);
 
   const handleUnregister = () => {
     listener.unregister_combo(shortcut);
